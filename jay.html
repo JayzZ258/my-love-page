@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给你的特别消息</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        h1 {
+            color: #ff4b6e;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .heart {
+            font-size: 50px;
+            color: #ff4b6e;
+            animation: heartbeat 1.2s infinite;
+        }
+
+        button {
+            background: #ff4b6e;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin: 10px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            15% { transform: scale(1.3); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.15); }
+            60% { transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>给特别的你</h1>
+        <div class="message">
+            <p>亲爱的[江瑞]：</p>
+            <p>认识你的这些日子，你的笑容就像春天的阳光，温暖了我的心房。每次和你聊天，时间总是过得特别快...</p>
+            <p>我想鼓起勇气告诉你：你真是个傻逼！</p>
+            <p>你愿意给我一个机会，让我骂你一次吗？</p>
+        </div>
+        <button onclick="showResponse('accept')">❤️ 小傻逼，点这里！</button>
+        <button onclick="showResponse('consider')">🌸 点这里，也可以</button>
+    </div>
+
+    <script>
+        function showResponse(type) {
+            if(type === 'accept') {
+                alert('🎉 太棒了！这是我今天最开心的时刻！我马上联系你～');
+                // 可以在这里添加跳转页面或更多互动
+            } else {
+                alert('☺️ 真是个可爱的小傻瓜！');
+            }
+        }
+    </script>
+</body>
+</html>
